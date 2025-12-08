@@ -2,12 +2,14 @@ defmodule Amplitude.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :amplitude,
-     version: "0.1.0",
-     elixir: "~> 1.3",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     deps: deps()]
+    [
+      app: :amplitude,
+      version: "0.1.0",
+      elixir: "~> 1.3",
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
+      deps: deps()
+    ]
   end
 
   # Configuration for the OTP application
@@ -28,8 +30,8 @@ defmodule Amplitude.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:httpoison, "~> 1.5.0"},
-      {:poison, "~> 3.1.0"} 
+      {:httpoison, "~> 2.3"},
+      {:poison, "~> 6.0"}
     ]
   end
 end
