@@ -31,7 +31,7 @@ defmodule Amplitude.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 2.3"},
-      {:poison, "~> 6.0"}
+      {:poison, "~> 4.0.1"}
     ]
   end
 end
