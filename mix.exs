@@ -16,7 +16,9 @@ defmodule Amplitude.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger]]
+    [
+      applications: [:logger, :poison]
+    ]
   end
 
   # Dependencies can be Hex packages:
@@ -30,7 +32,7 @@ defmodule Amplitude.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:httpoison, "~> 2.0.0"},
+      {:httpoison, "~> 2.3"},
       {:poison, "~> 4.0.1"}
     ]
   end
