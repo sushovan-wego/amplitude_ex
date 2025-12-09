@@ -1,6 +1,6 @@
 # This file is responsible for configuring your application
 # and its dependencies with the aid of the Mix.Config module.
-use Mix.Config
+import Config
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
@@ -20,7 +20,7 @@ use Mix.Config
 #
 #     config :logger, level: :info
 #
-if Mix.env == :test do
+if Mix.env() == :test do
   config :amplitude, api_host: "test"
 else
   config :amplitude, api_host: "https://api.amplitude.com/httpapi"
